@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <select id="city-select" onchange="changeImage()">
+        <option value="new-york">New York</option>
+        <option value="paris">Paris</option>
+        <option value="tokyo">Tokyo</option>
+    </select>
+
+    <img id="city-image" src="">
+
+    <script>
+        function changeImage() {
+            var selectedValue = document.getElementById("city-select").value;
+
+            var imageElement = document.getElementById("city-image");
+
+            if (selectedValue === "new-york") {
+                imageElement.src = "1.png";
+            } else if (selectedValue === "paris") {
+                imageElement.src = "2.png";
+            } else if (selectedValue === "tokyo") {
+                imageElement.src = "3.png";
+            }
+        }
+
+    </script>
+</body>
+
+</html>
